@@ -1,0 +1,366 @@
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  margin-top: 0;
+  font-family: 'Righteous', serif;
+  color:#ffffff;
+}
+a{
+  text-decoration: none;
+}
+.component{
+  position: relative;
+  z-index: 1;
+}
+
+.component-headline:after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.2);
+  pointer-events: none;
+}
+.slider-wrap{
+  background-image: url("https://static.pexels.com/photos/2324/skyline-buildings-new-york-skyscrapers.jpg");
+  background-color: hsla(0,0%,100%,0.70);
+  background-blend-mode: overlay;
+  background-repeat: no-repeat;
+  background-size: cover;
+  z-index: -1;
+  /*padding-top: 150px;
+  padding-bottom: 150px;*/
+}
+
+.row-header {
+  pointer-events: none;
+  position: absolute;
+  width: 100%;
+  height:100%;
+  left:0;
+  top:0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 2;
+}
+.header-wrap {
+
+}
+
+.header-wrap h1,
+.header-wrap h2,
+.outer-wrap .cta-wrap {
+  text-align: center;
+  margin-top: 10px;
+}
+
+/*.outer-wrap .cta-wrap {
+  margin-top: 50px;
+}*/
+
+
+.outer-wrap .cta-main .cta-text:before {
+  background-color: transparent;
+}
+
+.owl-carousel {
+  z-index: auto;
+}
+
+.owl-carousel:after {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 8%;
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  margin-left: 0;
+  pointer-events: none;
+  background: url() no-repeat center 50%;
+  background-size: 100% auto;
+}
+.owl-stage{
+  min-width: 100%;
+  width: 100%;
+  padding-left: 0;
+  padding-right: 0;
+}
+.owl-item {
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
+  -webkit-transform: translate(0);
+          transform: translate(0);
+}
+.item {
+  opacity: 0.4;
+  transition: .4s ease all;
+  margin: 0 -70px;
+  transform: scale(.6);
+}
+
+.item img{
+  display: block;
+  max-width: 800px;
+  max-height: 400px !important;
+  margin-top: inherit;
+  margin-bottom: inherit;
+  margin-left: auto;
+  margin-right: auto;
+}
+.active .item {
+  display: block;
+  height: auto;
+  transform: scale(1);
+  opacity: 1;
+}
+
+/* content and cta */
+.inner {
+  position: absolute;
+  bottom: 20%;
+  left: 0;
+  right: 0;
+  text-align: center;
+}
+h3 {
+  margin: 0;
+}
+.header-wrap h1,
+.header-wrap h2{
+  overflow: hidden;
+}
+.headline-wrap h3,
+.headline-wrap h4,
+.cta-main {
+  display: inline-block;
+  overflow: hidden;
+}
+/*.header-wrap h1 span:before,
+.header-wrap h2 span:before,*/
+.headline-wrap h3 span:before,
+.headline-wrap h4 span:before,
+.cta-main .cta-text:before {
+  content: "";
+  background-color: currentColor;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+/*.header-wrap h1 span,
+.header-wrap h2 span{
+  position: relative;
+  -webkit-animation-name: revealTitle;
+  -webkit-animation-duration: 3s;
+  -webkit-animation-timing-function: ease-in-out;
+  -webkit-animation-delay: 0.3s;
+  -webkit-animation-iteration-count: 1;
+  animation-name: revealTitle;
+  animation-duration: 3s;
+  animation-timing-function: ease-in-out;
+  animation-delay: 0.3s;
+  animation-iteration-count: 1;
+}*/
+
+.headline-wrap h3 span,
+.headline-wrap h4 span,
+.cta-main .cta-text {
+  position: relative;
+}
+.header-wrap h1 span,
+.headline-wrap h3 span:before {
+  transition: .3s .3s;
+}
+.header-wrap h2 span,
+.headline-wrap h4 span:before {
+  transition: .3s .45s;
+}
+.cta-main .cta-text:before {
+  transition: .3s .5s;
+}
+.active .headline-wrap h3 span:before,
+.active .headline-wrap h4 span:before,
+.active .cta-main .cta-text:before {
+  transform: translateX(100%);
+  left: 1px;
+}
+/* END CTA Button*/
+
+/* Title Animation */
+/*.reveal-text {
+  -webkit-user-select: none;
+          user-select: none;
+  color:#ffe221;
+  text-shadow: 1px 1px #000000;
+}
+@-webkit-keyframes revealTitle {
+  0%  {
+    transform: translateX(0);
+  }
+  100%  {
+    transform: translateX(100%);
+    left: 1px;
+  }
+}
+@keyframes revealTitle {
+  0%  {
+    transform: translateX(0);
+  }
+  100%  {
+    transform: translateX(100%);
+    left: 1px;
+  }
+}*/
+/* Title Animation END */
+
+/* OWL-Carousel Navigation*/
+.owl-nav {
+  position: absolute;
+  width: 100%;
+  top: 50%;
+  margin-top:0;
+  text-align: center;
+  z-index: 2;
+  -ms-transform: translateY(-50%);
+  -webkit-transform: translateY(-50%);
+  transform: translateY(-50%);
+  color: #cdcbcd;
+}
+.owl-theme .owl-nav [class*=owl-],
+.owl-theme .owl-nav [class*=owl-]:hover{
+  padding: 0;
+  background: none;
+}
+.owl-nav i {
+  font-size: 40px;
+  color:#ffffff;
+  display: inline-block;
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+  text-align: center;
+  border: 2px solid white;
+}
+
+.owl-nav .owl-next,
+.owl-nav .owl-prev {
+  display: inline-block;
+  position: relative;
+}
+
+.owl-nav .owl-prev {
+  left: -40%;
+}
+.owl-nav .owl-next {
+  right: -40%;
+}
+
+.owl-theme .owl-dots .owl-dot span{
+  width: 0;
+}
+.owl-dots {
+  text-align: center;
+  /*position: fixed;*/
+  /*left: 0;*/
+  /*margin-top: 10px;*/
+  width: 100%;
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
+}
+.owl-dot {
+  border-radius: 50px;
+  height: 10px;
+  width: 10px;
+  display: inline-block;
+  background: rgba(127,127,127, 0.5);
+  margin-left: 5px;
+  margin-right: 5px;
+}
+.owl-dot.active {
+  background: rgba(127,127,127, 1);
+}
+
+/* can remove */
+.headline-wrap,
+.item .cta-wrap {
+  display: none;
+}
+
+.header-wrap h1 {
+  font-size:5rem;
+}
+
+.header-wrap h2 {
+  font-size:3rem;
+}
+
+.header-wrap h2 span {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.header-wrap h2 span:before,
+.header-wrap h2 span:after {
+  content:'';
+  display:inline-block;
+  width: 100px;
+  height:3px;
+  background: #ffffff;
+}
+
+.header-wrap h2 span:before {
+  -ms-transform: translateX(-10px);
+  -webkit-transform: translateX(-10px);
+  transform: translateX(-10px);
+}
+
+.header-wrap h2 span:after {
+  -ms-transform: translateX(10px);
+  -webkit-transform: translateX(10px);
+  transform: translateX(10px);
+}
+.cta-main span {
+  position: relative;
+  background: #ffffff;
+  border-radius: 5px;
+}
+/* can remove end */
+
+/* END OWL-Carousel Navigation*/
+@media only screen and (max-width:900px) {
+  html {
+    font-size:5px;
+  }
+  .header-wrap h2 span:before,
+  .header-wrap h2 span:after {
+    height:3px;
+    width: 25px;
+  }
+  #full-width{
+    padding: 0;
+  }
+  .item img{
+    height: 400px !important;
+  }
+  .active .item img{
+    max-height: 400px !important;
+  }
+}
+@media only screen and (max-width:420px) {
+  .item img{
+    height: 200px !important;
+  }
+  .active .item img{
+    max-height: 200px !important;
+  }
+}
